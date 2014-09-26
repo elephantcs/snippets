@@ -13,6 +13,7 @@ The Elephant public 'Snippet library' for developers & designers.
 
 | Module | Link |
 | :------------- | :------------- |
+| Offcanvas navigation | https://gist.github.com/Freekbron/9bd58c973b08037a49af |
 
 --
 
