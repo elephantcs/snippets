@@ -27,8 +27,8 @@ The Elephant public 'Snippet library' for developers & designers.
 
 | Module | Link |
 |:------------- | :------------- |
-| **Font Awesome** | http://fontawesome.io/cheatsheet/ |
-| **Foundation Icon Fonts 3** | http://zurb.com/playground/foundation-icon-fonts-3 |
+| Font Awesome | http://fontawesome.io/cheatsheet/ |
+| Foundation Icon Fonts 3 | http://zurb.com/playground/foundation-icon-fonts-3 |
 | *Unicode Code Converter* | http://rishida.net/tools/conversion/ |
 
 --
