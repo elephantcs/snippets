@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+
+\$args = array (
+	'post_type'              => '${1:post_type}',
+	'post_status'            => '${2:published}',
+	'category_name'          => '${3:tax_name}',
+	's'                      => '${4:search_param}',
+	'pagination'             => ${5:true},
+	'posts_per_page'         => '${6:10}',
+	'ignore_sticky_posts'    => ${7:false},
+	'order'                  => '${8:DESC}',
+	'orderby'                => '${9:date}',
+	'meta_query'             => array(
+		array(
+			'key'       => '${10:custom_field_key}',
+			'value'     => '${11:custom_field_value}',
+			'compare'   => '${12:NOT IN}', //LIKE, NOT LIKE, IN, BETWEEN, NOT BETWEEN, EXISTS
+		),
+	),
+);
+
+\$query = new WP_Query( \$args );
+
+
+if ( \$query->have_posts() ) {
+	while ( \$query->have_posts() ) {
+		\$query->the_post();
+		// do something
+	}
+} else {
+	echo '${13:Geen posts gevonden}';
+}
+
+wp_reset_postdata();
+
+]]></content>
+	<tabTrigger>wploop</tabTrigger>
+	<description>WP - WP query advanced</description>
+</snippet>

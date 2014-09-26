@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+
+<?php \$trimmed = wp_trim_words( get_the_excerpt(), \$num_words = ${1:num_words}, \$more = ${2:null} ); ?>
+
+<p><?php echo \$trimmed ?></p>
+
+]]></content>
+  <tabTrigger>wptrimmedexcept</tabTrigger>
+  <description>WP - Trimmed excerpt</description>
+  <!-- <scope>[add here]</scope> -->
+</snippet>

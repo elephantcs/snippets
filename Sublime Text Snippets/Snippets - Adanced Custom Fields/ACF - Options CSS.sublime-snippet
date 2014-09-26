@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+
+<${1:div} style="${2:cssprop}: <?php the_field('${3:field_name}'); ?>">
+
+</${1:div}>
+
+]]></content>
+  <tabTrigger>acfoptioncss</tabTrigger>
+  <description>ACF - Options CSS</description>
+  <!-- <scope>[add here]</scope> -->
+</snippet>

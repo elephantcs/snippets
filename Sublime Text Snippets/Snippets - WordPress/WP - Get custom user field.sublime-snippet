@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+<?php
+
+	\$user_id = get_current_user_id();
+
+	echo get_field('${1:field_name}', 'user_'.$user_id.'');
+
+?>
+]]></content>
+  <tabTrigger>wpuserfield</tabTrigger>
+  <description>WP - Get custom user field</description>
+  <!-- <scope>[add here]</scope> -->
+</snippet>

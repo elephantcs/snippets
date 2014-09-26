@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+<?php if ( get_field( '${1:field_name}', 'options' ) ) : ?>
+	<?php the_field( '${1:field_name}', 'options' ); ?>
+<?php endif; ?>
+]]></content>
+  <tabTrigger>acfoptions</tabTrigger>
+  <description>ACF - Options field</description>
+</snippet>

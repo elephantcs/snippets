@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+<?php if ( get_field( '${1:field_name}' ) ) : ?>
+	<?php the_field( '${1:field_name}' ); ?>
+<?php endif; ?>
+]]></content>
+  <tabTrigger>acffield</tabTrigger>
+  <description>ACF - Get field</description>
+</snippet>

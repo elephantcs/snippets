@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+<?php 
+
+	\$object = get_queried_object();
+
+	echo wp_get_attachment_image(get_field('${1:field_name}', '${2:tax_term_}'.\$object->term_id.''), '${3:image_size}'); 
+
+?>]]></content>
+  <tabTrigger>acftaximage</tabTrigger>
+  <description>ACF - Archive image</description>
+</snippet>
+

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[
+<nav id="navigation" role="navigation">
+	<div class="wrap">
+
+		<div id="navigation-wrap">
+		    <?php wp_nav_menu(array(
+				'theme_location' => '${1:main-menu}',
+				'depth'          => 1,
+				'container'      => ''
+			)); ?>
+		</div>
+		
+	<div class="clear"></div>
+
+	</div>
+</nav><!-- #navigation -->
+
+]]></content>
+  <tabTrigger>wpnavmenu</tabTrigger>
+  <description>WP - Nav menu</description>
+</snippet>
