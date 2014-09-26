@@ -25,11 +25,17 @@ The Elephant public 'Snippet library' for developers & designers.
 
 ### Icon sets
 
-| Module | Link |
+| Set | Link |
 |:------------- | :------------- |
 | Font Awesome | http://fontawesome.io/cheatsheet/ |
 | Foundation Icon Fonts 3 | http://zurb.com/playground/foundation-icon-fonts-3 |
-| *Unicode Code Converter* | http://rishida.net/tools/conversion/ |
+| Octicons (GitHub's icons) | https://octicons.github.com/ |
+| Themify Icons | http://themify.me/themify-icons |
+| Elusive Icons | http://shoestrap.org/downloads/elusive-icons-webfont/#icons |
+
+| Tools | Link |
+|:------------- | :------------- |
+| Unicode Code Converter | http://rishida.net/tools/conversion/ |
 
 --
 
