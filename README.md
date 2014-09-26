@@ -19,7 +19,7 @@ The Elephant public 'Snippet library' for developers & designers.
 
 ### Snippets
 
-| Module | Link |
+| Name | Link |
 | :------------- | :------------- |
 
 --
