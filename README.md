@@ -21,7 +21,7 @@ The Elephant public 'Snippet library' for developers & designers.
 
 | Name | Link |
 | :------------- | :------------- |
-| CSS yes/no switch from checkbox | https://gist.github.com/Sjouw/c06076635e11cf4606ff |
+| Pure CSS yes/no switch from checkbox | https://gist.github.com/Sjouw/c06076635e11cf4606ff |
 
 --
 
