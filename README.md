@@ -34,6 +34,9 @@ The Elephant public 'Snippet library' for developers & designers.
 | Octicons (GitHub's icons) | https://octicons.github.com/ |
 | Themify Icons | http://themify.me/themify-icons |
 | Elusive Icons | http://shoestrap.org/downloads/elusive-icons-webfont/#icons |
+| Dashicons (WP) | http://melchoyce.github.io/dashicons/ |
+| Pixellove | http://www.pixellove.com/ |
+
 
 | Tools | Link |
 |:------------- | :------------- |
