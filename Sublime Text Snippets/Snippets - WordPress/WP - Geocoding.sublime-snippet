@@ -1,0 +1,70 @@
+<snippet>
+    <content><![CDATA[
+
+/** 
+ * 1. Create fields for street, postal code, place
+ * 2. Add to includes/enqueue.php
+ **/
+
+wp_enqueue_script( 'google-maps', 'http://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.7');
+
+if( 'company' == get_post_type() && is_single() ){
+
+    \$street = get_field( '${1:field_name}' );
+    \$postcode = get_field( '${2:field_name}' );
+    \$place = get_field( '${3:field_name}' );
+
+    \$address    = \$street.' '.\$postcode.' '.\$place;
+    \$lat_long   = ecs_lookup( \$address );
+
+    // echo '<pre>';
+    // print_r( \$lat_long );
+    // echo '</pre>';
+
+    wp_localize_script( 'google-maps', 'company_location', \$lat_long );
+
+}
+
+/** 
+ * 3. Add geocoding function to custom.php 
+ **/
+
+function ecs_lookup($string){
+ 
+   \$string = str_replace (' ', '+', urlencode(\$string));
+   \$details_url = 'http://maps.googleapis.com/maps/api/geocode/json?address='.\$string.'&sensor=false';
+ 
+   \$ch = curl_init();
+   curl_setopt(\$ch, CURLOPT_URL, \$details_url);
+   curl_setopt(\$ch, CURLOPT_RETURNTRANSFER, 1);
+   \$response = json_decode(curl_exec(\$ch), true);
+ 
+   // If Status Code is ZERO_RESULTS, OVER_QUERY_LIMIT, REQUEST_DENIED or INVALID_REQUEST
+   if (\$response['status'] != 'OK') {
+    return null;
+   }
+
+   \$geometry = \$response['results'][0]['geometry'];
+ 
+    \$longitude = \$geometry['location']['lat'];
+    \$latitude = \$geometry['location']['lng'];
+ 
+    \$array = array(
+        'latitude' => \$geometry['location']['lat'],
+        'longitude' => \$geometry['location']['lng'],
+        'location_type' => \$geometry['location_type'],
+    );
+ 
+    return \$array;
+
+}
+
+/** 
+ * 4. Latitude / longitude is now availabe in JS like company_location.latitude
+ * 5. Use with something like maplace.js
+ **/
+
+]]></content>
+    <tabTrigger>wpgeocoding</tabTrigger>
+    <description>WP - Geocoding</description>
+</snippet>
