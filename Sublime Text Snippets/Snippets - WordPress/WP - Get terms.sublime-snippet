@@ -1,0 +1,51 @@
+<snippet>
+    <content><![CDATA[
+
+// Vul hier de taxonomies in die je wil loopen
+\$taxonomies = array( 
+    '${1:tax_1}',
+    '${2:tax_2}',
+);
+
+// Kies je argumenten
+\$args = array(
+    'orderby'           => 'name', 
+    'order'             => 'ASC',
+    'hide_empty'        => true, 
+    'exclude'           => array(), 
+    'include'           => array(),
+    'fields'            => 'all', 
+    'slug'              => '', 
+    'parent'            => '',
+    'hierarchical'      => true, 
+    'child_of'          => 0, 
+); 
+
+\$terms = get_terms( \$taxonomies, \$args );
+
+foreach( \$terms as \$term ):
+    
+    // Handige tags
+
+    // get_term_link( \$term );
+
+    // \$term->term_id
+    // \$term->name
+    // \$term->slug
+    // \$term->term_group
+    // \$term->term_taxonomy_id
+    // \$term->taxonomy
+    // \$term->description
+    // \$term->parent
+    // \$term->count
+
+    ?>
+
+    <?php
+
+endforeach;
+
+]]></content>
+    <tabTrigger>wpgetterms</tabTrigger>
+    <description>WP - Get terms</description>
+</snippet>
