@@ -36,6 +36,7 @@ The Elephant public 'Snippet library' for developers & designers.
 | Elusive Icons | http://shoestrap.org/downloads/elusive-icons-webfont/#icons |
 | Dashicons (WP) | http://melchoyce.github.io/dashicons/ |
 | Pixellove | http://www.pixellove.com/ |
+| Linies | http://linies.uistore.io/ |
 
 
 | Tools | Link |
