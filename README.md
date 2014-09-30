@@ -37,7 +37,8 @@ The Elephant public 'Snippet library' for developers & designers.
 | Dashicons (WP) | http://melchoyce.github.io/dashicons/ |
 | Pixellove | http://www.pixellove.com/ |
 | Linies | http://linies.uistore.io/ |
-
+| Flag set for Sketch | https://dribbble.com/shots/1744431-Flag-Set-for-Sketch |
+| Payment webfont (SVG) | http://www.orlandotm.com/payment-webfont/ |
 
 | Tools | Link |
 |:------------- | :------------- |
