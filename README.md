@@ -42,6 +42,7 @@ The Elephant public 'Snippet library' for developers & designers.
 | Tools | Link |
 |:------------- | :------------- |
 | Unicode Code Converter | http://rishida.net/tools/conversion/ |
+| Fontface Ninja: Discover Fonts from any page | http://fontface.ninja/ |
 
 --
 
