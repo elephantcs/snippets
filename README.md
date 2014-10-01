@@ -47,5 +47,13 @@ The Elephant public 'Snippet library' for developers & designers.
 
 --
 
+### Javascript tools
+
+| Tool | Link |
+|:------------- | :------------- |
+| Snazzy Maps (style gmaps) | http://snazzymaps.com/ |
+
+--
+
 #### See also
 *   http://css-tricks.com/snippets/
