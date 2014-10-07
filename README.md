@@ -39,6 +39,8 @@ The Elephant public 'Snippet library' for developers & designers.
 | Linies | http://linies.uistore.io/ |
 | Flag set for Sketch | https://dribbble.com/shots/1744431-Flag-Set-for-Sketch |
 | Payment webfont (SVG) | http://www.orlandotm.com/payment-webfont/ |
+| Modern UI Icons | http://modernuiicons.com/ |
+| Metrize Icons | http://www.alessioatzeni.com/metrize-icons/ |
 
 | Tools | Link |
 |:------------- | :------------- |
