@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[
+<style type="text/css">
+
+	a {
+
+		color:<?php echo wc_hex_lighter( \$base, ${1:lighten} ); ?>;
+
+	}
+
+	h2 {
+		
+		font-size: 18px!important;
+
+	}
+	
+	#template_container table,
+	#template_container table tr,
+	#template_container table td,
+	#template_container table td p,
+	#template_container table td strong,
+	#template_container table thead {
+
+		<?php echo $body_content_inner; ?>
+
+	}
+
+</style>
+
+]]></content>
+  <tabTrigger>wpwooemail</tabTrigger>
+  <description>WP / Woo - Styling email</description>
+  <!-- <scope>[add here]</scope> -->
+</snippet>
