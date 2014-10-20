@@ -1,0 +1,48 @@
+<snippet>
+  <content><![CDATA[<div class="gform_wrapper" id="gform_wrapper_2">
+
+	<form method="post" enctype="multipart/form-data" target="gform_ajax_frame_2" id="gform_2" action="#0">
+
+        <div class="gform_body">
+            <ul id="gform_fields_2" class="gform_fields top_label description_below">
+            
+                <li id="field_2_1" class="gfield gplaceholder gfield_contains_required">
+                    <label class="gfield_label" for="input_2_1">
+                    	${1:Naam}<span class="gfield_required">*</span>
+                    </label>
+                    <div class="ginput_container">
+                   		<input name="input_1" id="input_2_1" type="text" value="" class="medium" tabindex="1" placeholder="${1:Naam} *">
+                    </div>
+                </li>
+                
+                <li id="field_2_2" class="gfield gplaceholder gfield_contains_required">
+                	<label class="gfield_label" for="input_2_2">
+                		${2:E-mail}<span class="gfield_required">*</span>
+					</label>
+					<div class="ginput_container">
+						<input name="input_2" id="input_2_2" type="email" value="" class="medium" tabindex="2" placeholder="${2:E-mail} *">
+					</div>
+                </li>
+                
+				<li id="field_2_3" class="gfield gplaceholder">
+					<label class="gfield_label" for="input_2_3">
+						${3:Bericht}
+					</label>
+					<div class="ginput_container">
+						<textarea name="input_3" id="input_2_3" class="textarea medium" tabindex="3" rows="10" cols="50" placeholder="${3:Bericht}"></textarea>
+					</div>
+				</li>
+
+            </ul>
+		</div>
+		
+        <div class="gform_footer top_label"> 
+        	<button class="button" id="gform_submit_button_2">${4:Verstuur bericht}</button>
+        </div>
+        
+	</form>
+
+</div>]]></content>
+  <tabTrigger>htmlgform</tabTrigger>
+  <description>HTML5 - Gravityforms</description>
+</snippet>
