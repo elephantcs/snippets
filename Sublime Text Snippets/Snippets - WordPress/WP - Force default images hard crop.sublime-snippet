@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+add_image_size('medium', get_option( 'medium_size_w' ), get_option( 'medium_size_h' ), true);
+add_image_size('large', get_option( 'large_size_w' ), get_option( 'large_size_h' ), true);
+]]></content>
+  <tabTrigger>wphardcrop</tabTrigger>
+  <description>WP - Force default images hard crop</description>
+</snippet>
