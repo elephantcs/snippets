@@ -6,6 +6,7 @@ The Elephant public 'Snippet library' for developers & designers.
 *   [Modules](#modules)
 *   [Snippets](#snippets)
 *   [Icon sets](#icon-sets)
+*   [Javascript tools](#javascript-tools)
 
 --
 
@@ -14,6 +15,8 @@ The Elephant public 'Snippet library' for developers & designers.
 | Module | Link |
 | :------------- | :------------- |
 | Offcanvas navigation | https://gist.github.com/Freekbron/9bd58c973b08037a49af |
+| WP FontAwesome nav walker | https://gist.github.com/Freekbron/b8cb016bfcf25967c60a |
+
 
 --
 
