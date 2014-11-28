@@ -3,7 +3,7 @@
 
 \$args = array (
 	'post_type'              => '${1:post_type}',
-	'post_status'            => '${2:published}',
+	'post_status'            => '${2:publish}',
 	'category_name'          => '${3:tax_name}',
 	's'                      => '${4:search_param}',
 	'pagination'             => ${5:true},
