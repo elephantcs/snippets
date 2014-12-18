@@ -27,6 +27,7 @@ The Elephant public 'Snippet library' for developers & designers.
 | :------------- | :------------- |
 | Pure CSS yes/no switch from checkbox | https://gist.github.com/Sjouw/c06076635e11cf4606ff |
 | Responsive video 16:9 / 4:3 | https://gist.github.com/Freekbron/87bcd1f56b5370a1c957 |
+| WordPress - Sidebar latest posts widget with toggle dropdown for small screens | https://gist.github.com/Sjouw/b9672b2e2d5566245fc3 |
 
 --
 
