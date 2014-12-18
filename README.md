@@ -16,6 +16,7 @@ The Elephant public 'Snippet library' for developers & designers.
 | :------------- | :------------- |
 | Offcanvas navigation | https://gist.github.com/Freekbron/9bd58c973b08037a49af |
 | WP FontAwesome nav walker | https://gist.github.com/Freekbron/b8cb016bfcf25967c60a |
+| WP Better latest posts menu widget | https://gist.github.com/Sjouw/272ab09f2495d9be74d5 |
 
 
 --
