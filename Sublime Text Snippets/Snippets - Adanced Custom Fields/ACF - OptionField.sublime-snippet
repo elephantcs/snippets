@@ -4,6 +4,6 @@
 	<?php the_field( '${1:field_name}', 'option' ); ?>
 <?php endif; ?>
 ]]></content>
-  <tabTrigger>acfoptions</tabTrigger>
+  <tabTrigger>acfoption</tabTrigger>
   <description>ACF - Options field</description>
 </snippet>
