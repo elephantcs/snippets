@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
-<?php if ( get_field( '${1:field_name}', 'options' ) ) : ?>
-	<?php the_field( '${1:field_name}', 'options' ); ?>
+<?php if ( get_field( '${1:field_name}', 'option' ) ) : ?>
+	<?php the_field( '${1:field_name}', 'option' ); ?>
 <?php endif; ?>
 ]]></content>
   <tabTrigger>acfoptions</tabTrigger>
