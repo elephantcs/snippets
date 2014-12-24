@@ -1,0 +1,138 @@
+<snippet>
+  <content><![CDATA[
+<div class="share-post">
+
+	<?php 
+
+		\$permalink = 	urlencode( get_permalink() );
+		\$title = 		urlencode( get_the_title() );
+		\$excerpt = 		str_replace( '[&hellip;]', '', get_the_excerpt() );
+		\$description = 	urlencode( strip_tags( \$excerpt ) );
+		\$description .= ' ';
+		\$description .= \$permalink;
+
+	?>
+
+	<span class="label">
+		<?php 
+			if ( is_singular( 'product' ) ) :
+				_e('${1:Deel dit} product:', 'ecs-corporate');
+			else : 
+				_e('${1:Deel dit} bericht:', 'ecs-corporate');
+			endif;
+		?>
+	</span>
+	
+	<?php 
+
+		\$fb_id = '${9:268247473289393}';
+		
+		\$fb_href = 'https://www.facebook.com/dialog/feed?app_id=';
+		\$fb_href .= \$fb_id;
+		\$fb_href .= '&amp;link=';
+		\$fb_href .= \$permalink;
+		\$fb_href .= '&amp;redirect_uri=';
+		\$fb_href .= \$permalink;
+		
+		\$fb_window = 'width=1000,height=600,scrollbars=no,toolbar=no,location=no';
+
+	?>
+	
+	<a class="share-facebook" 
+		title="<?php _e('${2:Delen via} Facebook', 'ecs-corporate'); ?>" 
+		target="_blank" 
+		href="<?php echo \$fb_href; ?>" 
+		onclick="window.open('<?php echo \$fb_href; ?>', 'Facebook', '<?php echo \$fb_window; ?>'); return false">
+		<span class="screen-reader-text">Facebook</span>
+	</a>
+	
+	<?php 
+		
+		\$twitter_href = 'http://twitter.com/home?status=';
+		\$twitter_href .= \$title;
+		\$twitter_href .= urlencode( ' - ' );
+		\$twitter_href .= \$permalink;
+		
+		\$twitter_window = 'width=600,height=400,scrollbars=no,toolbar=no,location=no';
+		
+	?>
+
+	<a class="share-twitter" 
+		title="<?php _e('${2:Delen via} Twitter', 'ecs-corporate'); ?>" 
+		target="_blank"
+		href="<?php echo \$twitter_href; ?>"
+		onclick="window.open('<?php echo \$twitter_href; ?>', 'Twitter', '<?php echo \$twitter_window; ?>'); return false">
+		<span class="screen-reader-text">Twitter</span>
+	</a>
+	
+	<?php 
+		
+		\$linkedin_href = 'https://www.linkedin.com/shareArticle?mini=true';
+		\$linkedin_href .= '&url=';
+		\$linkedin_href .= \$permalink;
+		\$linkedin_href .= '&title=';
+		\$linkedin_href .= \$title;
+		\$linkedin_href .= '&summary=';
+		\$linkedin_href .= \$description;
+		\$linkedin_href .= '&source=';
+		\$linkedin_href .= get_bloginfo('name');
+		
+		\$linkedin_window = 'width=600,height=460,scrollbars=no,toolbar=no,location=no';
+		
+	?>
+	
+	<a class="share-linkedin" 
+		title="<?php _e('${2:Delen via} LinkedIn', 'ecs-corporate'); ?>" 
+		target="_blank"
+		href="<?php echo \$linkedin_href; ?>"
+		onclick="window.open('<?php echo \$linkedin_href; ?>', 'LinkedIn', '<?php echo \$linkedin_window; ?>'); return false">
+		<span class="screen-reader-text">LinkedIn</span>
+	</a>
+	
+	<?php 
+		
+		\$google_href = 'https://plus.google.com/share?';
+		\$google_href .= 'url=';
+		\$google_href .= \$permalink;
+		
+		\$google_window = 'width=600,height=460,scrollbars=no,toolbar=no,location=no';
+		
+	?>
+
+	<a class="share-google-plus" 
+		title="<?php _e('${2:Delen via} Google+', 'ecs-corporate'); ?>" 
+		target="_blank"
+		href="<?php echo \$google_href; ?>"
+		onclick="window.open('<?php echo \$google_href; ?>', 'LinkedIn', '<?php echo \$google_window; ?>'); return false">
+		<span class="screen-reader-text">Google+</span>
+	</a>
+	
+	<?php 
+		
+		\$mail_href = 'mailto:';
+		\$mail_href .= '?body=';
+		if ( is_singular( 'product' ) ) :
+			\$mail_href .= __('Bekijk dit product', 'ecs-corporate');
+		else : 
+			\$mail_href .= __('Bekijk dit bericht', 'ecs-corporate');
+		endif;
+		\$mail_href .= ': ';
+		\$mail_href .= get_permalink();
+		\$mail_href .= '&subject=';
+		\$mail_href .= get_the_title();
+		\$mail_href .= ' - ';
+		\$mail_href .= get_bloginfo('name');
+		
+	?>
+	
+	<a class="share-email" 
+		title="<?php _e('${2:Delen via} E-mail', 'ecs-corporate'); ?>"
+		href="<?php echo \$mail_href; ?>">
+		<span class="screen-reader-text">E-mail</span>
+	</a>
+	
+</div>
+]]></content>
+  <tabTrigger>ecssocialsharecustom</tabTrigger>
+  <description>ECS - Social Share - custom</description>
+</snippet>

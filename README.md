@@ -6,6 +6,7 @@ The Elephant public 'Snippet library' for developers & designers.
 *   [Modules](#modules)
 *   [Snippets](#snippets)
 *   [Icon sets](#icon-sets)
+*   [Javascript tools](#javascript-tools)
 
 --
 
@@ -14,6 +15,9 @@ The Elephant public 'Snippet library' for developers & designers.
 | Module | Link |
 | :------------- | :------------- |
 | Offcanvas navigation | https://gist.github.com/Freekbron/9bd58c973b08037a49af |
+| WP FontAwesome nav walker | https://gist.github.com/Freekbron/b8cb016bfcf25967c60a |
+| WP Better latest posts menu widget | https://gist.github.com/Sjouw/272ab09f2495d9be74d5 |
+
 
 --
 
@@ -23,6 +27,7 @@ The Elephant public 'Snippet library' for developers & designers.
 | :------------- | :------------- |
 | Pure CSS yes/no switch from checkbox | https://gist.github.com/Sjouw/c06076635e11cf4606ff |
 | Responsive video 16:9 / 4:3 | https://gist.github.com/Freekbron/87bcd1f56b5370a1c957 |
+| WordPress - Sidebar latest posts widget with toggle dropdown for small screens | https://gist.github.com/Sjouw/b9672b2e2d5566245fc3 |
 
 --
 
