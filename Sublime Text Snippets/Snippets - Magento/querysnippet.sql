@@ -1,0 +1,10 @@
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/unsecure/base_url’;
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/secure/base_url’;
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/unsecure/base_link_url’;
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/unsecure/base_skin_url’;
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/unsecure/base_media_url’;
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/unsecure/base_js_url’;
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/secure/base_link_url’;
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/secure/base_skin_url’;
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/secure/base_media_url’;
+UPDATE core_config_data SET value="unsecure.domain.com" WHERE path=’web/secure/base_js_url’;
