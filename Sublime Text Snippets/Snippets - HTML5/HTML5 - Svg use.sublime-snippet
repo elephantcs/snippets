@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[<svg role="img" class="icon-${1:home}">
+    <use xlink:href="#${1:home}"></use>
+</svg>]]></content>
+  <tabTrigger>svguse</tabTrigger>
+  <description>HTML5 - Svg use</description>
+</snippet>
