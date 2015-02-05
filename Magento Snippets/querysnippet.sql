@@ -1,4 +1,4 @@
-UPDATE core_config_data SET value = REPLACE (value, 'http://staging.aladdin-express.nl/', 'http://freek.local:8888/aladdin/');
+UPDATE core_config_data SET value = REPLACE (value, 'new_site', 'old_site');
 
 /* MAMP users:
  * 
