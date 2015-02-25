@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+<?php echo '<pre>'; print_r(${1:get_queried_object()}); echo '</pre>'; ?>
+]]></content>
+  <tabTrigger>wpobj</tabTrigger>
+  <description>WP - queried_object print_r</description>
+</snippet>
