@@ -1,4 +1,4 @@
-UPDATE core_config_data SET value = REPLACE (value, 'new_site', 'old_site');
+UPDATE core_config_data SET value = REPLACE (value, 'old_url', 'new_url');
 
 /* MAMP users:
  * 
