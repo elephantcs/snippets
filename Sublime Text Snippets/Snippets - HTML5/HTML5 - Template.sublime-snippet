@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="${1:utf-8}">
+    <title>${2:Page Title}</title>
+  </head>
+  <body>
+    $0
+  </body>
+  </html>
+]]></content>
+<tabTrigger>html5template</tabTrigger>
+</snippet>

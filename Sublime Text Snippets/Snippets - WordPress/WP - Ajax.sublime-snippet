@@ -1,0 +1,78 @@
+<snippet>
+  <content><![CDATA[
+
+<?php
+
+/**
+ * ECS - WP Ajax initialization
+ **/
+
+// 1. Add to enqueue.php
+
+wp_localize_script( 'theme-scripts', 'ecs_ajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+
+// 2. Prepare functions in Javascript
+
+?>
+
+<script type="text/javascript">
+jQuery( '${1:class}' ).click( function( e ){
+
+	e.preventDefault();
+
+	var data = {
+		'action': '${2:function}'
+	};
+
+	// Tip: voeg hier BlockUI toe!
+
+	// Remove it via an ajax script
+	jQuery.post( ecs_ajax.ajaxurl, data, function( response ) {
+		// JSON response?
+		var obj = jQuery.parseJSON( response );
+		console.log( obj.key1 );
+		console.log( obj.key2 );
+		console.log( obj.key3 );
+
+		// Gewone response?
+		console.log( response );
+
+		// Tip: deblokkeer BlockUI hier!
+	});
+
+});
+</script>
+
+<?php
+
+// 3. Prepare functions in PHP
+
+add_action( 'wp_ajax_nopriv_${2:function}', '${2:function}' );
+add_action( 'wp_ajax_${2:function}', '${2:function}' );
+
+function ecs_wp_function(){
+
+	// Return een JSON array
+
+	\$return_arr = array(
+		'key1'	=> 'value1',
+		'key2'	=> 'value2',
+		'key3'	=> 'value3'
+	);
+
+	echo json_encode( \$return_arr );
+
+	// Of echo gewoon data (HTML bijvoorbeeld)
+	echo 'data';
+
+	die();
+
+}
+
+?>
+
+]]></content>
+  <tabTrigger>wpajax</tabTrigger>
+  <description>WP - Ajax</description>
+  <!-- <scope>[add here]</scope> -->
+</snippet>

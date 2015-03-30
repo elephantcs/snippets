@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+    <?php
+
+    /**
+     * ECS Snippet - Code only on local
+     **/
+
+     ?>
+
+	<?php if( 'local' != pathinfo( \$_SERVER['SERVER_NAME'], PATHINFO_EXTENSION ) ): ?>
+
+	<!-- Je code hier -->
+
+	<?php endif; ?>]]></content>
+  <tabTrigger>ecslocal</tabTrigger>
+  <description>ECS - Only On Local</description>
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+    <?php
+
+    /**
+     * ECS Snippet - Current Items
+     **/
+
+    \$current_category = Mage::registry( 'current_category' );
+    \$current_product  = Mage::registry( 'current_product' );
+    \$current_cms_page = Mage::registry( 'cms_page' );
+
+    ?>]]></content>
+  <tabTrigger>magentocurrent</tabTrigger>
+  <description>Magento - Current Items</description>
+</snippet>
+
