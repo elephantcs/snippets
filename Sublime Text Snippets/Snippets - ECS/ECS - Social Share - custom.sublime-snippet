@@ -4,12 +4,14 @@
 
 	<?php 
 
-		\$permalink = 	urlencode( get_permalink() );
-		\$title = 		urlencode( get_the_title() );
-		\$excerpt = 		str_replace( '[&hellip;]', '', get_the_excerpt() );
-		\$description = 	urlencode( strip_tags( \$excerpt ) );
-		\$description .= ' ';
-		\$description .= \$permalink;
+		\$permalink = 		rawurlencode( get_permalink() );
+		\$permalink_short = 	rawurlencode( wp_get_shortlink() );
+		\$blogname = 		rawurlencode( get_bloginfo('name') );
+		\$title = 			rawurlencode( get_the_title() );
+		\$excerpt = 			str_replace( '[&hellip;]', '', get_the_excerpt() );
+		\$description = 		rawurlencode( strip_tags( \$excerpt ) );
+		\$description .= 	rawurlencode( ' ' );
+		\$description .= 	\$permalink;
 
 	?>
 
@@ -50,8 +52,8 @@
 		
 		\$twitter_href = 'http://twitter.com/home?status=';
 		\$twitter_href .= \$title;
-		\$twitter_href .= urlencode( ' - ' );
-		\$twitter_href .= \$permalink;
+		\$twitter_href .= rawurlencode( ' - ' );
+		\$twitter_href .= \$permalink_short;
 		
 		\$twitter_window = 'width=600,height=400,scrollbars=no,toolbar=no,location=no';
 		
@@ -68,14 +70,14 @@
 	<?php 
 		
 		\$linkedin_href = 'https://www.linkedin.com/shareArticle?mini=true';
-		\$linkedin_href .= '&url=';
+		\$linkedin_href .= '&amp;url=';
 		\$linkedin_href .= \$permalink;
-		\$linkedin_href .= '&title=';
+		\$linkedin_href .= '&amp;title=';
 		\$linkedin_href .= \$title;
-		\$linkedin_href .= '&summary=';
+		\$linkedin_href .= '&amp;summary=';
 		\$linkedin_href .= \$description;
-		\$linkedin_href .= '&source=';
-		\$linkedin_href .= get_bloginfo('name');
+		\$linkedin_href .= '&amp;source=';
+		\$linkedin_href .= \$blogname;
 		
 		\$linkedin_window = 'width=600,height=460,scrollbars=no,toolbar=no,location=no';
 		
@@ -112,16 +114,16 @@
 		\$mail_href = 'mailto:';
 		\$mail_href .= '?body=';
 		if ( is_singular( 'product' ) ) :
-			\$mail_href .= __('Bekijk dit product', 'ecs-corporate');
+			\$mail_href .= rawurlencode( __('Bekijk dit product', 'ecs-corporate') );
 		else : 
-			\$mail_href .= __('Bekijk dit bericht', 'ecs-corporate');
+			\$mail_href .= rawurlencode( __('Bekijk dit bericht', 'ecs-corporate') );
 		endif;
-		\$mail_href .= ': ';
-		\$mail_href .= get_permalink();
+		\$mail_href .= rawurlencode( ': ' );
+		\$mail_href .= \$permalink;
 		\$mail_href .= '&subject=';
-		\$mail_href .= get_the_title();
-		\$mail_href .= ' - ';
-		\$mail_href .= get_bloginfo('name');
+		\$mail_href .= \$title;
+		\$mail_href .= rawurlencode( ' - ' );
+		\$mail_href .= \$blogname;
 		
 	?>
 	
