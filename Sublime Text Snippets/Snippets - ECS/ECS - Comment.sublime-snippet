@@ -1,0 +1,13 @@
+<snippet>
+  <content>
+    <![CDATA[/*------------------------------------------------------------------------*/
+/*  ${1:Comment}
+${2:/*    - Description}
+/*------------------------------------------------------------------------*/
+
+
+]]>
+</content>
+  <tabTrigger>comment</tabTrigger>
+  <description>ECS - Comment</description>
+</snippet>
