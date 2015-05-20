@@ -105,7 +105,7 @@
 		title="<?php _e('${2:Delen via} Google+', 'ecs-corporate'); ?>" 
 		target="_blank"
 		href="<?php echo \$google_href; ?>"
-		onclick="window.open('<?php echo \$google_href; ?>', 'LinkedIn', '<?php echo \$google_window; ?>'); return false">
+		onclick="window.open('<?php echo \$google_href; ?>', 'Google+', '<?php echo \$google_window; ?>'); return false">
 		<span class="screen-reader-text">Google+</span>
 	</a>
 	
