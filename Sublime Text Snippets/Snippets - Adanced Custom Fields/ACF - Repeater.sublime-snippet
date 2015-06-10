@@ -1,18 +1,14 @@
 <snippet>
   <content><![CDATA[
-<?php
- 
-if( have_rows('${1:field_name}') ):
+${1:<?php }if( have_rows( '${3:field_name}' ) ) :${2: ?>}
 
-    while ( have_rows('${1:field_name}') ) : the_row();
+    ${1:<?php }while ( have_rows( '${3:field_name}' ) ) : the_row();${2: ?>}
 
-        the_sub_field('${2:sub_field_name}');
+        ${1:<?php }the_sub_field( '${4:sub_field_name}' );${2: ?>}
  
-    endwhile;
+    ${1:<?php }endwhile;${2: ?>}
  
-endif;
- 
-?>
+${1:<?php }endif;${2: ?>}
 ]]></content>
   <tabTrigger>acfrepeater</tabTrigger>
   <description>ACF - Repeater</description>
