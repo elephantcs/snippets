@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[
-    <?php
+	<?php
 
-    /**
-     * ECS Snippet - Get product attribute
-     **/
+	/**
+	 * ECS Snippet - Get product attribute
+	 **/
 
-    \$_product = Mage::registry('current_product');
+	\$_product = Mage::registry('current_product');
 
-    echo \$_product->getResource()->getAttribute( '${1:AttributeName}' )->getFrontend()->getValue( \$_product );
+	echo \$_product->getResource()->getAttribute( '${1:AttributeName}' )->getFrontend()->getValue( \$_product );
 
-    ?>]]></content>
+	?>]]></content>
   <tabTrigger>magentoattribute</tabTrigger>
   <description>Magento - Product Attribute Single</description>
 </snippet>

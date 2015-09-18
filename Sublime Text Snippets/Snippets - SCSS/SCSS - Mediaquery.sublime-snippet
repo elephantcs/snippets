@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[@include media( \$${1:mobile} ) {
-    ${2:display: block;}
+	${2:display: block;}
 }]]></content>
   <tabTrigger>media</tabTrigger>
   <description>SCSS - Mediaquery</description>

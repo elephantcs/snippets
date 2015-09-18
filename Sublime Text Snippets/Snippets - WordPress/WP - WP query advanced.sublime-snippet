@@ -2,20 +2,20 @@
 	<content><![CDATA[
 
 \$args = array (
-	'post_type'              => '${1:post_type}',
-	'post_status'            => '${2:publish}',
-	'category_name'          => '${3:tax_name}',
-	's'                      => '${4:search_param}',
-	'pagination'             => ${5:true},
-	'posts_per_page'         => '${6:10}',
-	'ignore_sticky_posts'    => ${7:false},
-	'order'                  => '${8:DESC}',
-	'orderby'                => '${9:date}',
-	'meta_query'             => array(
+	'post_type'				=> '${1:post_type}',
+	'post_status'			=> '${2:publish}',
+	'category_name'			=> '${3:tax_name}',
+	's'						=> '${4:search_param}',
+	'pagination'			=> ${5:true},
+	'posts_per_page'		=> '${6:10}',
+	'ignore_sticky_posts'	=> ${7:false},
+	'order'					=> '${8:DESC}',
+	'orderby'				=> '${9:date}',
+	'meta_query'			=> array(
 		array(
-			'key'       => '${10:custom_field_key}',
-			'value'     => '${11:custom_field_value}',
-			'compare'   => '${12:NOT IN}', //LIKE, NOT LIKE, IN, BETWEEN, NOT BETWEEN, EXISTS
+			'key'		=> '${10:custom_field_key}',
+			'value'		=> '${11:custom_field_value}',
+			'compare'	=> '${12:NOT IN}', //LIKE, NOT LIKE, IN, BETWEEN, NOT BETWEEN, EXISTS
 		),
 	),
 );

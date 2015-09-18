@@ -1,32 +1,32 @@
 <snippet>
-    <content><![CDATA[
+	<content><![CDATA[
 
 // Vind terms bij de post
 \$term_list = wp_get_post_terms( \$post->ID, '${1:tax_1}', array( 'fields' => '${2:field}' ) ) ;
 
 foreach( \$term_list as \$term ):
-    
-    // Handige tags
+	
+	// Handige tags
 
-    // get_term_link( \$term );
+	// get_term_link( \$term );
 
-    // \$term->term_id
-    // \$term->name
-    // \$term->slug
-    // \$term->term_group
-    // \$term->term_taxonomy_id
-    // \$term->taxonomy
-    // \$term->description
-    // \$term->parent
-    // \$term->count
+	// \$term->term_id
+	// \$term->name
+	// \$term->slug
+	// \$term->term_group
+	// \$term->term_taxonomy_id
+	// \$term->taxonomy
+	// \$term->description
+	// \$term->parent
+	// \$term->count
 
-    ?>
+	?>
 
-    <?php
+	<?php
 
 endforeach;
 
 ]]></content>
-    <tabTrigger>wpgetpostterms</tabTrigger>
-    <description>WP - WP Get post terms</description>
+	<tabTrigger>wpgetpostterms</tabTrigger>
+	<description>WP - WP Get post terms</description>
 </snippet>

@@ -4,10 +4,10 @@
 	<div class="wrap">
 
 		<div id="navigation-wrap">
-		    <?php wp_nav_menu(array(
-				'theme_location' => '${1:main-menu}',
-				'depth'          => 1,
-				'container'      => ''
+			<?php wp_nav_menu(array(
+				'theme_location'	=> '${1:main-menu}',
+				'depth'				=> 1,
+				'container'			=> ''
 			)); ?>
 		</div>
 		

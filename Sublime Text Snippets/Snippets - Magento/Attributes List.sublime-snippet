@@ -2,30 +2,30 @@
   <content><![CDATA[
 <ul class="product-attributes">
 
-    <?php
+	<?php
 
-    /**
-     * ECS Snippet - Get product attributes list
-     **/
+	/**
+	 * ECS Snippet - Get product attributes list
+	 **/
 
-    \$attributes = \$_product->getAttributes();
+	\$attributes = \$_product->getAttributes();
 
-    foreach (\$attributes as \$attribute) {
-        if (\$attribute->getIsVisibleOnFront()) {
-            \$label = \$attribute->getStoreLabel();
-            \$value = \$attribute->getFrontend()->getValue(\$_product);
-            ?>
-            <li>
-                <span class="attr-label"><?php echo \$label; ?></span>
-                :&nbsp;
-                <span class="attr-value"><?php echo \$value; ?></span>
-            </li>
-            <?php
-        }
-    }
+	foreach (\$attributes as \$attribute) {
+		if (\$attribute->getIsVisibleOnFront()) {
+			\$label = \$attribute->getStoreLabel();
+			\$value = \$attribute->getFrontend()->getValue(\$_product);
+			?>
+			<li>
+				<span class="attr-label"><?php echo \$label; ?></span>
+				:&nbsp;
+				<span class="attr-value"><?php echo \$value; ?></span>
+			</li>
+			<?php
+		}
+	}
 
-    ?>
-    
+	?>
+	
 </ul>]]></content>
   <tabTrigger>magentoattributes</tabTrigger>
   <description>Magento - Product Attributes List</description>

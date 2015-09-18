@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[
-    <?php
+	<?php
 
-    /**
-     * ECS Snippet - Code only on local
-     **/
+	/**
+	 * ECS Snippet - Code only on local
+	 **/
 
-     ?>
+	 ?>
 
 	<?php if( 'local' != pathinfo( \$_SERVER['SERVER_NAME'], PATHINFO_EXTENSION ) ): ?>
 
