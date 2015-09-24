@@ -1,0 +1,25 @@
+<snippet>
+  <content>
+  	<![CDATA[
+
+  	<script>
+
+		/*------------------------------------------------------------------------*/
+		/*  Event tracking
+		/*------------------------------------------------------------------------*/
+
+	    jQuery( '.ga-event' ).on( 'click', function() {
+
+	    	var $this = jQuery( this );
+	    	ga( 'send', 'event', '${1:Click event}', '${2:Link geklikt}', $this.data( 'ga-event' ) );
+	    
+	    });
+
+	</script>
+
+	<a href="#" class="ga-event" data-ga-event="Geklikt op ${3:Event}">${4:Linktekst}</a>
+
+    ]]></content>
+  <tabTrigger>wpeventrack</tabTrigger>
+  <description>WP - Event tracking</description>
+</snippet>
