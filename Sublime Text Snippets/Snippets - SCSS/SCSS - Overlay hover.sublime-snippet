@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[a {
+	position: relative;
+	display: block;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 10;
+		background: rgba(${2:white}, 0);
+		pointer-events: none;
+		transition: background \$tempo;
+	}
+	
+	&:hover,
+	&:focus {
+		
+		&:before {
+			background: rgba(${2:white}, ${1:0.5});
+		}
+		
+	}
+	
+}]]></content>
+  <tabTrigger>overlayhover</tabTrigger>
+  <description>SCSS - Overlay hover</description>
+</snippet>
