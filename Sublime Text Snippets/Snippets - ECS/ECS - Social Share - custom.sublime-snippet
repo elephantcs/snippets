@@ -26,18 +26,12 @@
 	</span>
 	
 	<?php 
-
-		\$fb_id = '${9:268247473289393}';
+	
+		\$fb_href = 'http://www.facebook.com/sharer/sharer.php?u=';
+		\$fb_href .= $permalink;
 		
-		\$fb_href = 'https://www.facebook.com/dialog/feed?app_id=';
-		\$fb_href .= \$fb_id;
-		\$fb_href .= '&amp;link=';
-		\$fb_href .= \$permalink;
-		\$fb_href .= '&amp;redirect_uri=';
-		\$fb_href .= \$permalink;
-		
-		\$fb_window = 'width=1000,height=600,scrollbars=no,toolbar=no,location=no';
-
+		\$fb_window = 'width=560,height=600,scrollbars=no,toolbar=no,location=no';
+	
 	?>
 	
 	<a class="share-facebook" 
