@@ -5,7 +5,6 @@
 	<?php 
 
 		\$permalink = 		rawurlencode( get_permalink() );
-		\$permalink_short = 	rawurlencode( wp_get_shortlink() );
 		\$blogname = 		rawurlencode( get_bloginfo('name') );
 		\$title = 			rawurlencode( get_the_title() );
 		\$excerpt = 			str_replace( '[&hellip;]', '', get_the_excerpt() );
@@ -44,10 +43,11 @@
 	
 	<?php 
 		
-		\$twitter_href = 'http://twitter.com/home?status=';
-		\$twitter_href .= \$title;
-		\$twitter_href .= rawurlencode( ' - ' );
-		\$twitter_href .= \$permalink_short;
+		\$twitter_href = 'https://twitter.com/intent/tweet';
+		\$twitter_href .= '?text=';
+		\$twitter_href .= $title;
+		\$twitter_href .= '&url=';
+		\$twitter_href .= $permalink;
 		
 		\$twitter_window = 'width=600,height=400,scrollbars=no,toolbar=no,location=no';
 		
