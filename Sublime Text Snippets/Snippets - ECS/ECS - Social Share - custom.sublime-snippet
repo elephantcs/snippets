@@ -27,7 +27,7 @@
 	<?php 
 	
 		\$fb_href = 'http://www.facebook.com/sharer/sharer.php?u=';
-		\$fb_href .= $permalink;
+		\$fb_href .= \$permalink;
 		
 		\$fb_window = 'width=560,height=600,scrollbars=no,toolbar=no,location=no';
 	
@@ -45,9 +45,9 @@
 		
 		\$twitter_href = 'https://twitter.com/intent/tweet';
 		\$twitter_href .= '?text=';
-		\$twitter_href .= $title;
+		\$twitter_href .= \$title;
 		\$twitter_href .= '&url=';
-		\$twitter_href .= $permalink;
+		\$twitter_href .= \$permalink;
 		
 		\$twitter_window = 'width=600,height=400,scrollbars=no,toolbar=no,location=no';
 		
