@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+<?php if ( \$${1:field_name} = get_field( '${1:field_name}' ) ) : ?>
+	<?php echo \$${1:field_name}; ?>
+<?php endif; ?>
+]]></content>
+  <tabTrigger>acffieldvar</tabTrigger>
+  <description>ACF - Get field with variable</description>
+</snippet>
