@@ -1,0 +1,5 @@
+<snippet>
+  <content><![CDATA[target="_blank" rel="noopener noreferrer"]]></content>
+  <tabTrigger>target</tabTrigger>
+  <description>HTML5 - target="_blank" + rel</description>
+</snippet>
