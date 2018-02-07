@@ -26,7 +26,7 @@
 	
 	<?php 
 	
-		\$fb_href = 'http://www.facebook.com/sharer/sharer.php?u=';
+		\$fb_href = 'https://www.facebook.com/sharer/sharer.php?u=';
 		\$fb_href .= \$permalink;
 		
 		\$fb_window = 'width=560,height=600,scrollbars=no,toolbar=no,location=no';
