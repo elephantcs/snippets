@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[&:hover,
+&:focus {
+	${1:}
+}]]></content>
+  <tabTrigger>hocus</tabTrigger>
+  <description>SCSS - Hover & Focus</description>
+</snippet>
