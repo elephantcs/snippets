@@ -1,0 +1,99 @@
+{
+	// Place your snippets for scss here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	
+	"BEM - Child": {
+		"prefix": "_c",
+		"description": "Add a BEM child",
+		"body": [
+			"&__${1:element} {",
+				"\t$0",
+			"}"
+		]
+	},
+	"BEM - Child with root": {
+		"prefix": "_cr",
+		"description": "Add a BEM child with a #{$root} selector prefix",
+		"body": [
+			"#{\\$root}__${1:element} {",
+				"\t$0",
+			"}"
+		]
+	},
+	"BEM - Modifier": {
+		"prefix": "_m",
+		"description": "Add a BEM modifier",
+		"body": [
+			"&--${1:element} {",
+				"\t$0",
+			"}"
+		]
+	},
+	"State selector": {
+		"prefix": "_s",
+		"description": "Add a state selector class",
+		"body": [
+			"&.is-${1:state} {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo element": {
+		"prefix": "_pe",
+		"description": "Add a psuedo element within a SCSS nested selector",
+		"body": [
+			"&::${1|before,after|} {",
+				"\t${2:content: '$3';}",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - :*-child": {
+		"prefix": "_pc-c",
+		"description": "Add a :*-child psuedo class within a SCSS nested selector, optionally inside a :not() inversion",
+		"body": [
+			"&${1::not(}:${2:${3:last}-child}${4:)} {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - State": {
+		"prefix": "_pc-s",
+		"description": "Add a psuedo state class within a SCSS nested selector",
+		"body": [
+			"&:${1|active,visited|} {",
+				"\t$0",
+			"}"
+		]
+	},	
+	"CSS - Psuedo class - Hover & focus": {
+		"prefix": "_hf",
+		"description": "Add the hover & focus psuedo state classes within a SCSS nested selector",
+		"body": [
+			"&:hover,",
+			"&:focus {",
+				"\t$0",
+			"}"
+		]
+	},
+	"ECS Media Query": {
+		"prefix": "_q",
+		"description": "Add a SCSS media query",
+		"body": [
+			"@media($${1:medium}) {",
+				"\t$0",
+			"}"
+		]
+	},
+	"ECS Media Query - Bourbon": {
+		"prefix": "_q-g",
+		"description": "Add a SCSS media query following Bourbon practices",
+		"body": [
+			"@include media($${1:medium-up}) {",
+				"\t$0",
+			"}"
+		]
+	},
+}
