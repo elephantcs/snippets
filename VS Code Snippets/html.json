@@ -1,0 +1,32 @@
+{
+    "<?php … ?>": {
+		"prefix": "php",
+		"description": "Add PHP tag",
+		"body": [
+			"<?php $0 ?>"
+		]
+	},
+	"<?php if (…) ?> … <?php endif ?>": {
+		"prefix": "if",
+		"description": "Add a if conditional with PHP template tags",
+		"body": [
+			"<?php if ( ${1:condition} ) : ?>",
+				"\t$0",
+			"<?php endif; ?>"
+		]
+	},
+	"<?php echo … ?>": {
+		"prefix": "echo",
+		"description": "Add an echo variable with PHP template tags",
+		"body": [
+			"<?php echo ${1:$}${2:'}$0${2:'} ?>",
+		]
+	},
+	"<?php var_dump(…) ?>": {
+		"prefix": "dump",
+		"description": "Add a var_dump function",
+		"body": [
+			"<?php var_dump( $0 ); ?>",
+		]
+	}
+}
