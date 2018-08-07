@@ -1,32 +1,108 @@
 {
-    "<?php … ?>": {
+    "php": {
 		"prefix": "php",
 		"description": "Add PHP tag",
 		"body": [
 			"<?php $0 ?>"
 		]
 	},
-	"<?php if (…) ?> … <?php endif ?>": {
+	"if": {
 		"prefix": "if",
-		"description": "Add a if conditional with PHP template tags",
+		"description": "Add an if conditional with PHP template tags",
 		"body": [
 			"<?php if ( ${1:condition} ) : ?>",
 				"\t$0",
 			"<?php endif; ?>"
 		]
 	},
-	"<?php echo … ?>": {
+	"else": {
+		"prefix": "else",
+		"description": "Add an else conditional with PHP template tags",
+		"body": [
+			"<?php else : ?>"
+		]
+	},
+	"foreach": {
+		"prefix": "foreach",
+		"description": "Add a foreach loop with PHP template tags",
+		"body": [
+			"<?php foreach ( \\$${1:values} as ${2:\\$key => }\\$${3:value} ) : ?>",
+				"\t$0",
+			"<?php endforeach; ?>"
+		]
+	},
+	"echo": {
 		"prefix": "echo",
 		"description": "Add an echo variable with PHP template tags",
 		"body": [
 			"<?php echo ${1:$}${2:'}$0${2:'} ?>",
 		]
 	},
-	"<?php var_dump(…) ?>": {
+	"_e": {
+		"prefix": "_wpe",
+		"description": "Add a WordPress i18n _e() function",
+		"body": [
+			"<?php _e( '${1:string}', '${2:ecs-corporate}' ) ?>",
+		]
+	},
+	"get_field": {
+		"prefix": "_acffield",
+		"description": "Add an Advanced Custom Fields get_field function",
+		"body": [
+            "<?php if( \\$${4:field_name} = get_${3:sub_}field( '${4:field_name}'${1:, '${2:options}'} ) ) : ?>",
+            	"\t<?php echo \\$${4:field_name}; ?>",
+            "<?php endif; ?>"
+		]
+	},
+	"ecs_get_icon_sprite": {
+		"prefix": "_ecs-svg",
+		"description": "Add a ecs_get_icon_sprite() PHP function",
+		"body": [
+			"<span class=\"${1:parent}__icon icon\"><?php echo ecs_get_icon_sprite( '${2:icon}' ) ?></span>",
+		]
+	},
+	"ecs_get_template_part": {
+		"prefix": "_ecs-part",
+		"description": "Add a ecs_get_template_part() PHP function",
+		"body": [
+			"<?php ecs_get_template_part( 'views/${1:file}'${2:, [${3}]} ) ?>",
+		]
+	},
+	"wp_get_attachment_image": {
+		"prefix": "_wpimg",
+		"description": "Add a WordPress wp_get_attachment_image() function",
+		"body": [
+            "<?php if( \\$${5:field_name} = wp_get_attachment_image( ${1:get_${2:sub_}field( '${5:field_name}' )}, '${3:full}'${4:, false, ['data-object-fit' => 'cover']} ) ) : ?>",
+            	"\t<?php echo \\$${5:field_name}; ?>",
+            "<?php endif; ?>"
+		]
+	},
+	"var_dump": {
 		"prefix": "dump",
 		"description": "Add a var_dump function",
 		"body": [
 			"<?php var_dump( $0 ); ?>",
+		]
+	},
+	"dd": {
+		"prefix": "dd",
+		"description": "Add a PHP dump and die function",
+		"body": [
+			"<?php dd( ${1:'string'} ) ?>",
+		]
+	},
+	"dump": {
+		"prefix": "dumper",
+		"description": "Add a PHP dump function",
+		"body": [
+			"<?php dump( $0 ) ?>",
+		]
+	},
+	"TODO": {
+		"prefix": "todo",
+		"description": "Add a TODO: in PHP tags",
+		"body": [
+			"<?php // TODO: $0 ?>",
 		]
 	}
 }
