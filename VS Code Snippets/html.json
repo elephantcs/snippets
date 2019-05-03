@@ -1,5 +1,5 @@
 {
-    "php": {
+	"php": {
 		"prefix": "php",
 		"description": "Add PHP tag",
 		"body": [
@@ -35,14 +35,14 @@
 		"prefix": "echo",
 		"description": "Add an echo variable with PHP template tags",
 		"body": [
-			"<?php echo ${1:$}${2:'}$0${2:'} ?>",
+			"<?= $0 ?>",
 		]
 	},
 	"_e": {
 		"prefix": "_wpe",
 		"description": "Add a WordPress i18n _e() function",
 		"body": [
-			"<?php _e( '${1:string}', '${2:ecs-corporate}' ) ?>",
+			"<?= __( '${1:string}', '${2:ecs-corporate}' ) ?>",
 		]
 	},
 	"get_field": {
@@ -50,7 +50,7 @@
 		"description": "Add an Advanced Custom Fields get_field function",
 		"body": [
             "<?php if( \\$${4:field_name} = get_${3:sub_}field( '${4:field_name}'${1:, '${2:options}'} ) ) : ?>",
-            	"\t<?php echo \\$${4:field_name}; ?>",
+            	"\t<?= \\$${4:field_name}; ?>",
             "<?php endif; ?>"
 		]
 	},
@@ -58,14 +58,41 @@
 		"prefix": "_ecs-svg",
 		"description": "Add a ecs_get_icon_sprite() PHP function",
 		"body": [
-			"<span class=\"${1:parent}__icon icon\"><?php echo ecs_get_icon_sprite( '${2:icon}' ) ?></span>",
+			"<span class=\"${1:parent}__icon icon\"><?= ecs_get_icon_sprite( '${2:icon}' ) ?></span>",
 		]
 	},
 	"ecs_get_template_part": {
 		"prefix": "_ecs-part",
 		"description": "Add a ecs_get_template_part() PHP function",
 		"body": [
-			"<?php ecs_get_template_part( 'views/${1:file}'${2:, [${3}]} ) ?>",
+			"<?php ecs_get_template_part( 'views${0}' ) ?>",
+		]
+	},
+	"ecs_implode_classes": {
+		"prefix": ["_ecs-classes", "_ecs-implode"],
+		"description": "Add a echo implode function used for HTML classes",
+		"body": [
+			"<?= implode( ' ', $0 ) ?>",
+		]
+	},
+	"ecs_block": {
+		"prefix": "_ecs-block",
+		"description": "Add a HTML block following Elephant flavour",
+		"body": [
+			"<div class=\"block${1: block--padding}\">\n",
+				"\t<div class=\"wrap\">\n",
+					"\t\t<div class=\"block__inner\">\n",
+						"\t\t\t<div class=\"block__header\">\n",
+							"\t\t\t\t<h2 class=\"block__title\"></h2>\n",
+						"\t\t\t</div>\n",
+						"\t\t\t<div class=\"block__body\">\n",
+							"\t\t\t\t$3{0}\n",
+						"\t\t\t</div>\n",
+						"\t\t\t<div class=\"block__footer\">\n",
+						"\t\t\t</div>\n",
+					"\t\t</div>\n",
+				"\t</div>\n",
+			"</div>"
 		]
 	},
 	"wp_get_attachment_image": {
@@ -73,7 +100,7 @@
 		"description": "Add a WordPress wp_get_attachment_image() function",
 		"body": [
             "<?php if( \\$${5:field_name} = wp_get_attachment_image( ${1:get_${2:sub_}field( '${5:field_name}' )}, '${3:full}'${4:, false, ['data-object-fit' => 'cover']} ) ) : ?>",
-            	"\t<?php echo \\$${5:field_name}; ?>",
+            	"\t<?= \\$${5:field_name}; ?>",
             "<?php endif; ?>"
 		]
 	},
