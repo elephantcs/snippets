@@ -1,11 +1,6 @@
 {
-	// Place your snippets for scss here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	
 	"BEM - Child": {
-		"prefix": "_c",
+		"prefix": ["__", "_c"],
 		"description": "Add a BEM child",
 		"body": [
 			"&__${1:element} {",
@@ -23,7 +18,7 @@
 		]
 	},
 	"BEM - Modifier": {
-		"prefix": "_m",
+		"prefix": ["--", "_m"],
 		"description": "Add a BEM modifier",
 		"body": [
 			"&--${1:element} {",
@@ -41,10 +36,10 @@
 		]
 	},
 	"CSS - Psuedo element": {
-		"prefix": "_pe",
+		"prefix": ["::", "_pe"],
 		"description": "Add a psuedo element within a SCSS nested selector",
 		"body": [
-			"&::${1|before,after|} {",
+			"&::${1|after,before|} {",
 				"\t${2:content: '$3';}",
 				"\t$0",
 			"}"
@@ -67,7 +62,7 @@
 				"\t$0",
 			"}"
 		]
-	},	
+	},
 	"CSS - Psuedo class - Hover & focus": {
 		"prefix": "_hf",
 		"description": "Add the hover & focus psuedo state classes within a SCSS nested selector",
@@ -79,19 +74,28 @@
 		]
 	},
 	"ECS Media Query": {
-		"prefix": "_q",
+		"prefix": ["@", "_q"],
 		"description": "Add a SCSS media query",
 		"body": [
-			"@media($${1:medium}) {",
+			"@media ($${1:medium}) {",
 				"\t$0",
 			"}"
 		]
 	},
+	"ECS Media Query - font-size modification": {
+		"prefix": ["@fz", "_q-fz"],
+		"description": "Add a SCSS media query with a standard font-size modification",
+		"body": [
+			"@media ($${1:medium}) {",
+				"\tfont-size: rem($0, \\$fz-${1:medium});",
+			"}"
+		]
+	},
 	"ECS Media Query - Bourbon": {
-		"prefix": "_q-g",
+		"prefix": ["@i", "_q-g"],
 		"description": "Add a SCSS media query following Bourbon practices",
 		"body": [
-			"@include media($${1:medium-up}) {",
+			"@include media ($${1:medium-up}) {",
 				"\t$0",
 			"}"
 		]
@@ -100,7 +104,7 @@
         "prefix": "_g",
         "description": "Add a ECS opinionated gutter mixin",
         "body": [
-			"@include gutter(",
+			"@include gutter (",
 				"${1:\t$$gutter   : ${5:20}px,}",
 				"${2:\t$$gutter-y : ${6:20}px, \n\t$$gutter-x : ${7:20}px,}",
 				"${3:\t$$item     : '&__${8:column}',}",
