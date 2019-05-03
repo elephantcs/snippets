@@ -1,0 +1,11 @@
+{
+	"iife": {
+		"prefix": "iife",
+		"body": [
+			"(() => {",
+				"\t$0",
+			"})();",
+		],
+		"description": "Log output to console"
+	}
+}
