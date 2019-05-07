@@ -9,7 +9,7 @@
 		]
 	},
 	"BEM - Child with root": {
-		"prefix": "_cr",
+		"prefix": ["$__", "_cr"],
 		"description": "Add a BEM child with a #{$root} selector prefix",
 		"body": [
 			"#{\\$root}__${1:element} {",
@@ -27,7 +27,7 @@
 		]
 	},
 	"State selector": {
-		"prefix": "_s",
+		"prefix": [".is", "_s"],
 		"description": "Add a state selector class",
 		"body": [
 			"&.is-${1:state} {",
@@ -54,8 +54,116 @@
 			"}"
 		]
 	},
+	"CSS - Psuedo class - &:nth-child(n)": {
+		"prefix": ":nc",
+		"description": "Add a :nth-child(n) psuedo class within a SCSS nested selector",
+		"body": [
+			"&:nth-child(${1:n}) {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:not(:nth-child(n))": {
+		"prefix": ":nnc",
+		"description": "Add a :nth-child(n) psuedo class within a SCSS nested selector, inside a :not() inversion",
+		"body": [
+			"&:not(:nth-child(${1:n})) {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:only-child": {
+		"prefix": ":oc",
+		"description": "Add a :only-child psuedo class within a SCSS nested selector",
+		"body": [
+			"&:only-child {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:not(:only-child)": {
+		"prefix": ":noc",
+		"description": "Add a :only-child psuedo class within a SCSS nested selector, inside a :not() inversion",
+		"body": [
+			"&:not(:only-child) {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:first-child": {
+		"prefix": ":fc",
+		"description": "Add a :first-child psuedo class within a SCSS nested selector",
+		"body": [
+			"&:first-child {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:not(:first-child)": {
+		"prefix": ":nfc",
+		"description": "Add a :first-child psuedo class within a SCSS nested selector, inside a :not() inversion",
+		"body": [
+			"&:not(:first-child) {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:last-child": {
+		"prefix": ":lc",
+		"description": "Add a :last-child psuedo class within a SCSS nested selector",
+		"body": [
+			"&:last-child {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:not(:last-child)": {
+		"prefix": ":nlc",
+		"description": "Add a :last-child psuedo class within a SCSS nested selector, inside a :not() inversion",
+		"body": [
+			"&:not(:last-child) {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:first-of-type": {
+		"prefix": ":fot",
+		"description": "Add a :first-of-type psuedo class within a SCSS nested selector",
+		"body": [
+			"&:first-of-type {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:not(:first-of-type)": {
+		"prefix": ":nfot",
+		"description": "Add a :first-of-type psuedo class within a SCSS nested selector, inside a :not() inversion",
+		"body": [
+			"&:not(:first-of-type) {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:last-of-type": {
+		"prefix": ":lot",
+		"description": "Add a :last-of-type psuedo class within a SCSS nested selector",
+		"body": [
+			"&:last-of-type {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class - &:not(:last-of-type)": {
+		"prefix": ":nlot",
+		"description": "Add a :last-of-type psuedo class within a SCSS nested selector, inside a :not() inversion",
+		"body": [
+			"&:not(:last-of-type) {",
+				"\t$0",
+			"}"
+		]
+	},
 	"CSS - Psuedo class - State": {
-		"prefix": "_pc-s",
+		"prefix": ["_pc-s"],
 		"description": "Add a psuedo state class within a SCSS nested selector",
 		"body": [
 			"&:${1|active,visited|} {",
@@ -63,8 +171,28 @@
 			"}"
 		]
 	},
+	"CSS - Psuedo class & Attribute - Disabled": {
+		"prefix": ":dis",
+		"description": "Add a disabled psuedo class & attribute within a SCSS nested selector. The attribute is mostly for JavaScript frameworks",
+		"body": [
+			"&[disabled],",
+			"&:disabled {",
+				"\t$0",
+			"}"
+		]
+	},
+	"CSS - Psuedo class & Attribute - Enabled": {
+		"prefix": ":ena",
+		"description": "Add an enabled psuedo class & attribute within a SCSS nested selector. The attribute is mostly for JavaScript frameworks",
+		"body": [
+			"&:not([disabled]),",
+			"&:enabled {",
+				"\t$0",
+			"}"
+		]
+	},
 	"CSS - Psuedo class - Hover & focus": {
-		"prefix": "_hf",
+		"prefix": ["hocus", "_hf"],
 		"description": "Add the hover & focus psuedo state classes within a SCSS nested selector",
 		"body": [
 			"&:hover,",
@@ -101,7 +229,7 @@
 		]
 	},
     "ECS Gutter": {
-        "prefix": "_g",
+        "prefix": ["@gutter", "_g"],
         "description": "Add a ECS opinionated gutter mixin",
         "body": [
 			"@include gutter (",
