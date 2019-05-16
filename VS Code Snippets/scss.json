@@ -1,4 +1,18 @@
 {
+	"$root: &;": {
+		"prefix": ["$r"],
+		"description": "Add a $root: &; declaration",
+		"body": [
+			"\\$root: &;"
+		]
+	},
+	"width: p(*)": {
+		"prefix": ["wp"],
+		"description": "Add a width: p(*) declaration",
+		"body": [
+			"width: p($0);"
+		]
+	},
 	"BEM - Child": {
 		"prefix": ["__", "_c"],
 		"description": "Add a BEM child",
@@ -55,7 +69,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:nth-child(n)": {
-		"prefix": ":nc",
+		"prefix": "n-c",
 		"description": "Add a :nth-child(n) psuedo class within a SCSS nested selector",
 		"body": [
 			"&:nth-child(${1:n}) {",
@@ -64,7 +78,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:not(:nth-child(n))": {
-		"prefix": ":nnc",
+		"prefix": "nn-c",
 		"description": "Add a :nth-child(n) psuedo class within a SCSS nested selector, inside a :not() inversion",
 		"body": [
 			"&:not(:nth-child(${1:n})) {",
@@ -73,7 +87,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:only-child": {
-		"prefix": ":oc",
+		"prefix": "o-c",
 		"description": "Add a :only-child psuedo class within a SCSS nested selector",
 		"body": [
 			"&:only-child {",
@@ -82,7 +96,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:not(:only-child)": {
-		"prefix": ":noc",
+		"prefix": "no-c",
 		"description": "Add a :only-child psuedo class within a SCSS nested selector, inside a :not() inversion",
 		"body": [
 			"&:not(:only-child) {",
@@ -91,7 +105,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:first-child": {
-		"prefix": ":fc",
+		"prefix": "f-c",
 		"description": "Add a :first-child psuedo class within a SCSS nested selector",
 		"body": [
 			"&:first-child {",
@@ -100,7 +114,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:not(:first-child)": {
-		"prefix": ":nfc",
+		"prefix": "nf-c",
 		"description": "Add a :first-child psuedo class within a SCSS nested selector, inside a :not() inversion",
 		"body": [
 			"&:not(:first-child) {",
@@ -109,7 +123,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:last-child": {
-		"prefix": ":lc",
+		"prefix": "l-c",
 		"description": "Add a :last-child psuedo class within a SCSS nested selector",
 		"body": [
 			"&:last-child {",
@@ -118,7 +132,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:not(:last-child)": {
-		"prefix": ":nlc",
+		"prefix": "nl-c",
 		"description": "Add a :last-child psuedo class within a SCSS nested selector, inside a :not() inversion",
 		"body": [
 			"&:not(:last-child) {",
@@ -127,7 +141,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:first-of-type": {
-		"prefix": ":fot",
+		"prefix": "f-o-t",
 		"description": "Add a :first-of-type psuedo class within a SCSS nested selector",
 		"body": [
 			"&:first-of-type {",
@@ -136,7 +150,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:not(:first-of-type)": {
-		"prefix": ":nfot",
+		"prefix": "nf-o-t",
 		"description": "Add a :first-of-type psuedo class within a SCSS nested selector, inside a :not() inversion",
 		"body": [
 			"&:not(:first-of-type) {",
@@ -145,7 +159,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:last-of-type": {
-		"prefix": ":lot",
+		"prefix": "l-o-t",
 		"description": "Add a :last-of-type psuedo class within a SCSS nested selector",
 		"body": [
 			"&:last-of-type {",
@@ -154,7 +168,7 @@
 		]
 	},
 	"CSS - Psuedo class - &:not(:last-of-type)": {
-		"prefix": ":nlot",
+		"prefix": "nl-o-t",
 		"description": "Add a :last-of-type psuedo class within a SCSS nested selector, inside a :not() inversion",
 		"body": [
 			"&:not(:last-of-type) {",
@@ -172,7 +186,7 @@
 		]
 	},
 	"CSS - Psuedo class & Attribute - Disabled": {
-		"prefix": ":dis",
+		"prefix": "dis{",
 		"description": "Add a disabled psuedo class & attribute within a SCSS nested selector. The attribute is mostly for JavaScript frameworks",
 		"body": [
 			"&[disabled],",
@@ -182,7 +196,7 @@
 		]
 	},
 	"CSS - Psuedo class & Attribute - Enabled": {
-		"prefix": ":ena",
+		"prefix": "ena{",
 		"description": "Add an enabled psuedo class & attribute within a SCSS nested selector. The attribute is mostly for JavaScript frameworks",
 		"body": [
 			"&:not([disabled]),",
